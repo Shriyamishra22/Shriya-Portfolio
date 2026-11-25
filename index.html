@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shriya Mishra | MERN Stack Developer</title>
-  <meta name="description" content="Portfolio of Shriya Mishra - MERN Stack Developer. Experienced in building responsive, scalable web applications with React.js, Node.js, Express.js, and MongoDB." />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F46E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'></polygon><polyline points='2 17 12 22 22 17'></polyline><polyline points='2 12 12 17 22 12'></polyline></svg>" />
+  <meta name="description"
+    content="Portfolio of Shriya Mishra - MERN Stack Developer. Experienced in building responsive, scalable web applications with React.js, Node.js, Express.js, and MongoDB." />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F46E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'></polygon><polyline points='2 17 12 22 22 17'></polyline><polyline points='2 12 12 17 22 12'></polyline></svg>" />
 
   <!-- Google Fonts: Inter & Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,6 +36,7 @@
               700: '#4338ca',
               800: '#3730a3',
               900: '#312e81',
+              950: '#1e1b4b',
             }
           },
           fontFamily: {
@@ -44,20 +50,32 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-white text-slate-900 dark:bg-[#0B0F19] dark:text-slate-100 antialiased selection:bg-indigo-100 selection:text-indigo-700">
+
+<body
+  class="bg-white text-slate-900 dark:bg-[#0B0F19] dark:text-slate-100 antialiased selection:bg-indigo-100 selection:text-indigo-700">
 
   <!-- 1. FULL PAGE ANIMATED LOADER -->
-  <div id="site-loader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white dark:bg-[#0B0F19] transition-opacity duration-500">
+  <div id="site-loader"
+    class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white dark:bg-[#0B0F19] transition-opacity duration-500">
     <div class="relative flex flex-col items-center max-w-sm px-6 text-center">
-      <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-400 p-[2px] shadow-lg mb-5 animate-spin">
-        <div class="w-full h-full bg-white dark:bg-[#0B0F19] rounded-2xl flex items-center justify-center">
-          <span class="font-black text-xl text-indigo-600">SM</span>
+      <div class="relative mb-5">
+        <div
+          class="absolute -inset-1.5 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-400 opacity-60 blur-md animate-pulse">
+        </div>
+        <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 to-cyan-400 p-[2px] shadow-lg">
+          <div class="w-full h-full bg-white dark:bg-[#0B0F19] rounded-[14px] flex items-center justify-center">
+            <span
+              class="font-black text-xl bg-gradient-to-r from-indigo-600 to-cyan-500 bg-clip-text text-transparent">SM</span>
+          </div>
         </div>
       </div>
       <h2 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight mb-1">Shriya Mishra</h2>
-      <p class="text-xs uppercase tracking-widest font-semibold text-indigo-600 dark:text-indigo-400 mb-6">MERN Stack Developer</p>
+      <p class="text-xs uppercase tracking-widest font-semibold text-indigo-600 dark:text-indigo-400 mb-6">MERN Stack
+        Developer</p>
       <div class="w-56 h-1.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mb-2">
-        <div id="loader-progress-bar" class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full w-0 transition-all duration-200"></div>
+        <div id="loader-progress-bar"
+          class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full w-0 transition-all duration-200">
+        </div>
       </div>
       <div class="flex items-center justify-between w-56 text-[11px] font-mono text-slate-400">
         <span>Loading...</span>
@@ -65,15 +83,16 @@
       </div>
     </div>
   </div>
-
   <!-- 2. SCROLL PROGRESS BAR -->
-  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-400 z-[100] w-0 transition-all duration-75"></div>
+  <div id="scroll-progress"
+    class="fixed top-0 left-0 h-1 bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-400 z-[100] w-0 transition-all duration-75">
+  </div>
 
   <!-- 3. FLOATING ISLAND NAVBAR WITH MARGIN-TOP 20px (NO DOT AFTER MISHRA) -->
   <div class="fixed top-5 left-0 right-0 z-50 px-4 sm:px-6 lg:px-10 pointer-events-none">
     <header class="max-w-7xl mx-auto rounded-2xl glass-nav py-4 px-6 sm:px-10 pointer-events-auto transition-all">
       <div class="flex items-center justify-between gap-6">
-        
+
         <!-- Logo (Dot Removed per User Request) -->
         <a href="#hero" class="flex items-center group cursor-pointer shrink-0">
           <span class="font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 dark:text-white">
@@ -83,30 +102,65 @@
 
         <!-- Desktop Nav Links with Generous Spacing -->
         <nav class="hidden lg:flex items-center gap-2 xl:gap-4">
-          <a href="#hero" class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Home</a>
-          <a href="#about" class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">About</a>
-          <a href="#skills" class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Skills</a>
-          <a href="#experience" class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Experience</a>
-          <a href="#projects" class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Projects</a>
-          <a href="#education" class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Education</a>
-          <a href="#contact" class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Contact</a>
+          <a href="#hero"
+            class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Home</a>
+          <a href="#about"
+            class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">About</a>
+          <a href="#skills"
+            class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Skills</a>
+          <a href="#experience"
+            class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Experience</a>
+          <a href="#projects"
+            class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Projects</a>
+          <a href="#education"
+            class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Education</a>
+          <a href="#contact"
+            class="nav-link px-4 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/70 dark:hover:bg-slate-800/60 transition-all">Contact</a>
         </nav>
 
         <!-- Right Side: Theme Toggle & Resume -->
         <div class="flex items-center gap-3.5 shrink-0">
-          <button id="theme-toggle-btn" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" title="Toggle Light/Dark Theme">
-            <svg id="theme-icon-sun" class="w-4 h-4 text-amber-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-            <svg id="theme-icon-moon" class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <button id="theme-toggle-btn"
+            class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            title="Toggle Light/Dark Theme">
+            <svg id="theme-icon-sun" class="w-4 h-4 text-amber-400 hidden" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="theme-icon-moon" class="w-4 h-4 text-slate-700" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
           </button>
 
-          <a href="resume.pdf" download="Shriya_Mishra_Resume.pdf" class="hidden sm:inline-flex items-center gap-2 px-4.5 py-2 text-xs font-semibold rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm hover:shadow transition-all">
-            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <a href="resume.pdf" download="Shriya_Mishra_Resume.pdf"
+            class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 shadow-sm hover:shadow transition-all">
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
             <span>Resume</span>
           </a>
-
-          <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
-            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <button id="mobile-menu-btn"
+            class="lg:hidden p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">
+            <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
           </button>
         </div>
       </div>
@@ -114,16 +168,28 @@
       <!-- Mobile Dropdown -->
       <div id="mobile-menu" class="lg:hidden hidden pt-4 pb-2 border-t border-slate-200 dark:border-slate-800 mt-3">
         <div class="flex flex-col space-y-1.5">
-          <a href="#hero" class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Home</a>
-          <a href="#about" class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">About</a>
-          <a href="#skills" class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Skills</a>
-          <a href="#experience" class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Experience</a>
-          <a href="#projects" class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Projects</a>
-          <a href="#education" class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Education</a>
-          <a href="#contact" class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Contact</a>
+          <a href="#hero"
+            class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Home</a>
+          <a href="#about"
+            class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">About</a>
+          <a href="#skills"
+            class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Skills</a>
+          <a href="#experience"
+            class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Experience</a>
+          <a href="#projects"
+            class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Projects</a>
+          <a href="#education"
+            class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Education</a>
+          <a href="#contact"
+            class="px-4 py-2.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl">Contact</a>
           <div class="pt-2 border-t border-slate-100 dark:border-slate-800">
-            <a href="resume.pdf" download="Shriya_Mishra_Resume.pdf" class="flex items-center justify-center gap-2 w-full py-2.5 text-xs font-semibold rounded-xl bg-indigo-600 text-white">
-              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <a href="resume.pdf" download="Shriya_Mishra_Resume.pdf"
+              class="flex items-center justify-center gap-2 w-full py-2.5 text-xs font-semibold rounded-xl bg-indigo-600 text-white">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
               <span>Download Resume</span>
             </a>
           </div>
@@ -131,102 +197,160 @@
       </div>
     </header>
   </div>
-
   <!-- 4. FULL DESKTOP HERO SECTION (WITH MOBILE-SPECIFIC PHOTO PLACEMENT) -->
-  <section id="hero" class="relative min-h-screen flex items-center justify-center pt-36 pb-24 md:pt-44 md:pb-32 lg:pt-48 lg:pb-36 overflow-hidden bg-white dark:bg-[#0B0F19] transition-colors">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px] bg-indigo-50/70 dark:bg-indigo-950/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
-    <div class="absolute top-1/3 right-10 w-96 h-96 bg-cyan-50/60 dark:bg-cyan-950/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <section id="hero"
+    class="relative min-h-screen flex items-center justify-center pt-36 pb-24 md:pt-44 md:pb-32 lg:pt-48 lg:pb-36 overflow-hidden bg-white dark:bg-[#0B0F19] transition-colors">
+    <div
+      class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[750px] bg-indigo-50/70 dark:bg-indigo-950/20 rounded-full blur-3xl pointer-events-none -z-10">
+    </div>
+    <div
+      class="absolute top-1/3 right-10 w-96 h-96 bg-cyan-50/60 dark:bg-cyan-950/20 rounded-full blur-3xl pointer-events-none -z-10">
+    </div>
 
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 w-full py-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-24 items-center">
-        
+
         <!-- Left: Hero Text Content (Spacious Laptop Layout) -->
         <div class="lg:col-span-7 flex flex-col items-start">
-          
+
           <!-- Badge -->
           <div class="mb-5">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 shadow-sm">
-              <svg class="w-3.5 h-3.5 text-indigo-600 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 shadow-sm">
+              <svg class="w-3.5 h-3.5 text-indigo-600 animate-pulse" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                </polygon>
+              </svg>
               <span>Welcome to my portfolio</span>
             </span>
           </div>
 
           <!-- Main Heading -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.18] mb-5">
-            Hi, I'm <span class="bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">Shriya Mishra</span>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.18] mb-5">
+            Hi, I'm <span
+              class="bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 bg-clip-text text-transparent">Shriya
+              Mishra</span>
           </h1>
 
           <!-- MOBILE VIEW ONLY: Image appears immediately after 'Hi, I'm Shriya Mishra' (Per User Request) -->
           <div class="lg:hidden my-6 flex justify-center w-full">
             <div class="relative group">
-              <div class="absolute -inset-3 rounded-full bg-gradient-to-tr from-indigo-600 via-indigo-400 to-cyan-400 opacity-70 blur-lg"></div>
-              <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full p-2 bg-white dark:bg-[#111827] shadow-soft-lg animate-float border-2 border-slate-200 dark:border-slate-800 overflow-hidden">
-                <img src="assets/profile.jpg" alt="Shriya Mishra" class="w-full h-full object-cover object-top rounded-full" />
+              <div
+                class="absolute -inset-3 rounded-full bg-gradient-to-tr from-indigo-600 via-indigo-400 to-cyan-400 opacity-70 blur-lg">
+              </div>
+              <div
+                class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full p-2 bg-white dark:bg-[#111827] shadow-soft-lg animate-float border-2 border-slate-200 dark:border-slate-800 overflow-hidden">
+                <img src="assets/profile.jpg" alt="Shriya Mishra"
+                  class="w-full h-full object-cover object-top rounded-full" />
               </div>
             </div>
           </div>
 
           <!-- Role Typing Effect (After image on mobile) -->
-          <div class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-700 dark:text-slate-200 mb-7 sm:mb-8 flex items-center min-h-[44px]">
+          <div
+            class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-700 dark:text-slate-200 mb-7 sm:mb-8 flex items-center min-h-[44px]">
             <span class="text-slate-500 dark:text-slate-400 mr-2 text-lg sm:text-xl font-normal">Specialized in</span>
-            <span id="typing-role" class="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-500 pb-0.5"></span>
+            <span id="typing-role"
+              class="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-500 pb-0.5"></span>
             <span class="typing-cursor"></span>
           </div>
-
           <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mb-9 lg:mb-11">
-            Proactive MERN Stack Developer skilled in building scalable, modern React web applications with robust components, clean responsive UI, and structured backend REST APIs.
+            Proactive MERN Stack Developer skilled in building scalable, modern React web applications with robust
+            components, clean responsive UI, and structured backend REST APIs.
           </p>
-
           <!-- Action Buttons with Generous Spacing -->
           <div class="flex flex-wrap items-center gap-4 sm:gap-5 mb-10 lg:mb-12 w-full sm:w-auto">
-            <a href="#projects" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-indigo-600 text-white font-semibold text-sm shadow-soft hover:bg-indigo-700 hover:shadow-lg transition-all">
+            <a href="#projects"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-indigo-600 text-white font-semibold text-sm shadow-soft hover:bg-indigo-700 hover:shadow-lg transition-all">
               <span>Explore Projects</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
             </a>
 
             <!-- Official WhatsApp Button -->
-            <a href="https://wa.me/918052625007?text=Hi%20Shriya,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm shadow-soft hover:shadow-lg transition-all">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z"/></svg>
+            <a href="https://wa.me/918052625007?text=Hi%20Shriya,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!"
+              target="_blank" rel="noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-sm shadow-soft hover:shadow-lg transition-all">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z" />
+              </svg>
               <span>WhatsApp</span>
             </a>
 
             <!-- Official Call Button -->
-            <a href="tel:8052625007" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white font-semibold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700 shadow-sm">
-              <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/></svg>
+            <a href="tel:8052625007"
+              class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white font-semibold text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700 shadow-sm">
+              <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" />
+              </svg>
               <span>Call Now</span>
             </a>
 
             <!-- Resume Button -->
-            <a href="resume.pdf" download="Shriya_Mishra_Resume.pdf" class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-medium text-sm hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-slate-800 transition-all shadow-sm">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <a href="resume.pdf" download="Shriya_Mishra_Resume.pdf"
+              class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 font-medium text-sm hover:text-indigo-600 dark:hover:text-indigo-400 border border-slate-200 dark:border-slate-800 transition-all shadow-sm">
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
               <span>Resume</span>
             </a>
           </div>
 
           <!-- Social Links & Location -->
-          <div class="flex items-center gap-6 pt-6 border-t border-slate-200 dark:border-slate-800 w-full">
+          <div
+            class="flex flex-wrap items-center gap-4 sm:gap-5 pt-6 border-t border-slate-200 dark:border-slate-800 w-full">
             <div class="flex items-center gap-3">
-              <a href="https://github.com/shriya-mishra-placeholder" target="_blank" rel="noreferrer" class="p-2.5 rounded-xl text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-200 dark:border-slate-800" aria-label="GitHub">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <a href="https://github.com/Shriyamishra22" target="_blank" rel="noreferrer"
+                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/70 dark:hover:bg-slate-800 hover:border-indigo-200 dark:hover:border-indigo-700 transition-all border border-slate-200 dark:border-slate-800 shadow-sm"
+                aria-label="GitHub">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg>
+                <span>GitHub</span>
               </a>
-              <a href="https://linkedin.com/in/shriya-mishra-placeholder" target="_blank" rel="noreferrer" class="p-2.5 rounded-xl text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-200 dark:border-slate-800" aria-label="LinkedIn">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <a href="https://linkedin.com/in/shriyamishra88" target="_blank" rel="noreferrer"
+                class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50/70 dark:hover:bg-slate-800 hover:border-indigo-200 dark:hover:border-indigo-700 transition-all border border-slate-200 dark:border-slate-800 shadow-sm"
+                aria-label="LinkedIn">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
               </a>
             </div>
-            <div class="h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
+            <div class="hidden sm:block h-4 w-px bg-slate-300 dark:bg-slate-700"></div>
             <div class="flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-400">
-              <svg class="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <svg class="w-3.5 h-3.5 shrink-0 text-indigo-600 dark:text-indigo-400" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
               <span>Amethi & Lucknow, Uttar Pradesh, India</span>
             </div>
           </div>
         </div>
-
         <!-- Right: Profile Image in Circular Frame (Desktop View: Generous Spacing) -->
         <div class="hidden lg:flex lg:col-span-5 justify-center lg:justify-end relative">
           <div class="relative group">
-            <div class="absolute -inset-4 rounded-full bg-gradient-to-tr from-indigo-600 via-indigo-400 to-cyan-400 opacity-75 blur-xl group-hover:opacity-95 transition-opacity"></div>
-            <div class="relative w-80 h-80 xl:w-[420px] xl:h-[420px] rounded-full p-3 bg-white dark:bg-[#111827] shadow-soft-lg animate-float border-2 border-slate-200 dark:border-slate-800 overflow-hidden">
-              <img src="assets/profile.jpg" alt="Shriya Mishra" class="w-full h-full object-cover object-top rounded-full" />
+            <div
+              class="absolute -inset-4 rounded-full bg-gradient-to-tr from-indigo-600 via-indigo-400 to-cyan-400 opacity-75 blur-xl group-hover:opacity-95 transition-opacity">
+            </div>
+            <div
+              class="relative w-80 h-80 xl:w-[420px] xl:h-[420px] rounded-full p-3 bg-white dark:bg-[#111827] shadow-soft-lg animate-float border-2 border-slate-200 dark:border-slate-800 overflow-hidden">
+              <img src="assets/profile.jpg" alt="Shriya Mishra"
+                class="w-full h-full object-cover object-top rounded-full" />
             </div>
           </div>
         </div>
@@ -236,75 +360,100 @@
   </section>
 
   <!-- 5. ABOUT SECTION WITH ANIMATED COUNTERS -->
-  <section id="about" class="py-28 md:py-36 bg-[#F8FAFC] dark:bg-[#0E1320] border-y border-slate-200/80 dark:border-slate-800 transition-colors">
+  <section id="about"
+    class="py-28 md:py-36 bg-[#F8FAFC] dark:bg-[#0E1320] border-y border-slate-200/80 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
           <span>About Me</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
           Creating Purposeful Digital Experiences with Modern Tech
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-indigo-500 mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-cyan-500 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-center">
         <!-- Photo in About section -->
         <div class="lg:col-span-5 flex justify-center">
           <div class="relative w-full max-w-md">
-            <div class="rounded-2xl overflow-hidden bg-white dark:bg-[#111827] p-3 border border-slate-200 dark:border-slate-800 shadow-soft-lg">
-              <img src="assets/about.jpg" alt="Shriya Mishra" class="w-full h-80 sm:h-96 md:h-[420px] object-cover object-top rounded-xl" />
+            <div
+              class="rounded-2xl overflow-hidden bg-white dark:bg-[#111827] p-3 border border-slate-200 dark:border-slate-800 shadow-soft-lg">
+              <img src="assets/about.jpg" alt="Shriya Mishra"
+                class="w-full h-80 sm:h-96 md:h-[420px] object-cover object-top rounded-xl" />
             </div>
-            <div class="absolute -bottom-3 -right-3 bg-gradient-to-r from-indigo-600 to-indigo-600 text-white px-4 py-2.5 rounded-xl shadow-soft font-semibold text-xs flex items-center gap-2">
+            <div
+              class="absolute -bottom-3 -right-3 bg-gradient-to-r from-indigo-600 to-cyan-500 text-white px-4 py-2.5 rounded-xl shadow-soft font-semibold text-xs flex items-center gap-2">
               <span>HAL & DigiCoders Trained</span>
             </div>
           </div>
         </div>
-
         <!-- Bio & Highlights -->
         <div class="lg:col-span-7 flex flex-col space-y-7">
           <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed text-base sm:text-lg">
-            <p>I am an ambitious MERN Stack Developer currently pursuing my Bachelor of Computer Applications (BCA) and gaining real-world industry experience as a MERN Stack Intern at DigiCoders Technologies Pvt. Ltd., Lucknow.</p>
-            <p>With hands-on experience in building responsive, user-friendly web applications, I specialize in crafting clean user interfaces with React.js, Tailwind CSS, and modern JavaScript (ES6+), backed by working knowledge of Node.js, Express.js, and MongoDB.</p>
-            <p>Having completed rigorous industry training at Hindustan Aeronautics Limited (HAL) on defense aerospace complaint systems, I bring a disciplined engineering mindset and a passion for writing clean, maintainable code.</p>
+            <p>I am an ambitious MERN Stack Developer currently pursuing my Bachelor of Computer Applications (BCA) and
+              gaining real-world industry experience as a MERN Stack Intern at DigiCoders Technologies Pvt. Ltd.,
+              Lucknow.</p>
+            <p>With hands-on experience in building responsive, user-friendly web applications, I specialize in crafting
+              clean user interfaces with React.js, Tailwind CSS, and modern JavaScript (ES6+), backed by working
+              knowledge of Node.js, Express.js, and MongoDB.</p>
+            <p>Having completed rigorous industry training at Hindustan Aeronautics Limited (HAL) on defense aerospace
+              complaint systems, I bring a disciplined engineering mindset and a passion for writing clean, maintainable
+              code.</p>
           </div>
 
           <!-- Feature Cards with Comfortable Spacing -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 pt-2">
-            <div class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-soft-sm">
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-soft-sm hover:border-indigo-200 dark:hover:border-indigo-800/70 hover:-translate-y-0.5 transition-all">
               <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-1.5">Frontend Engineering</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Building intuitive React applications with atomic components.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Building intuitive React
+                applications with atomic components.</p>
             </div>
-            <div class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-soft-sm">
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-soft-sm hover:border-indigo-200 dark:hover:border-indigo-800/70 hover:-translate-y-0.5 transition-all">
               <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-1.5">Full-Stack Awareness</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Designing REST APIs and handling MongoDB & SQL schemas.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Designing REST APIs and handling
+                MongoDB & SQL schemas.</p>
             </div>
-            <div class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-soft-sm">
+            <div
+              class="p-6 rounded-2xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 shadow-soft-sm hover:border-indigo-200 dark:hover:border-indigo-800/70 hover:-translate-y-0.5 transition-all">
               <h3 class="font-bold text-sm text-slate-900 dark:text-white mb-1.5">Industry Discipline</h3>
-              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Real-world workflow experience at DigiCoders & HAL.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">Real-world workflow experience at
+                DigiCoders & HAL.</p>
             </div>
           </div>
 
           <!-- Animated Counters Grid -->
-          <div id="stats-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4.5 pt-6 border-t border-slate-200 dark:border-slate-800">
-            <div class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left">
-              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter" data-target="3" data-suffix="+">0+</p>
+          <div id="stats-grid"
+            class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-slate-800">
+            <div
+              class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left shadow-soft-sm hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
+              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter"
+                data-target="3" data-suffix="+">0+</p>
               <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">Live Projects</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">ERP & Portals</p>
             </div>
-            <div class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left">
-              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter" data-target="45" data-suffix="+ Days">0+ Days</p>
+            <div
+              class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left shadow-soft-sm hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
+              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter"
+                data-target="45" data-suffix="+ Days">0+ Days</p>
               <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">HAL Training</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">AMC System</p>
             </div>
-            <div class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left">
-              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter" data-target="10" data-suffix="+">0+</p>
+            <div
+              class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left shadow-soft-sm hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
+              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter"
+                data-target="10" data-suffix="+">0+</p>
               <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">Technologies</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">React, Node, etc.</p>
             </div>
-            <div class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left">
-              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter" data-target="100" data-suffix="%">0%</p>
+            <div
+              class="p-5 rounded-xl bg-white dark:bg-[#111827] border border-slate-200 dark:border-slate-800 text-left shadow-soft-sm hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
+              <p class="text-2xl sm:text-3xl font-black text-indigo-600 dark:text-indigo-400 stat-counter"
+                data-target="100" data-suffix="%">0%</p>
               <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1">Responsive</p>
               <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Clean Standards</p>
             </div>
@@ -318,102 +467,167 @@
   <!-- 6. SKILLS SECTION -->
   <section id="skills" class="py-28 md:py-36 bg-white dark:bg-[#0B0F19] transition-colors">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
           <span>Technical Stack</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
           Skills & Technical Capabilities
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-indigo-500 mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-cyan-500 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         <!-- Languages -->
-        <div class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <div
+          class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-all">
           <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2.5">
-            <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></span>
             <span>Programming Languages</span>
           </h3>
           <div class="space-y-5">
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>JavaScript (ES6+)</span><span>88%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="88%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>JavaScript (ES6+)</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">88%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="88%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>HTML5</span><span>95%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="95%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>HTML5</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">95%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="95%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>CSS3</span><span>90%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="90%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>CSS3</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">90%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="90%"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Frontend -->
-        <div class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <div
+          class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-all">
           <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2.5">
-            <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></span>
             <span>Frontend Development</span>
           </h3>
           <div class="space-y-5">
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>React.js</span><span>85%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="85%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>React.js</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">85%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="85%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Tailwind CSS</span><span>90%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="90%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Tailwind CSS</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">90%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="90%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Bootstrap & Responsive UI</span><span>88%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="88%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Bootstrap & Responsive UI</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">88%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="88%"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Backend & DB -->
-        <div class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <div
+          class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-all">
           <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2.5">
-            <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></span>
             <span>Backend & Database</span>
           </h3>
           <div class="space-y-5">
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Node.js & Express.js</span><span>75%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="75%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Node.js & Express.js</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">75%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="75%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>MongoDB</span><span>78%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="78%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>MongoDB</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">78%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="78%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>SQL</span><span>72%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="72%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>SQL</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">72%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="72%"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Tools -->
-        <div class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft">
+        <div
+          class="bg-white dark:bg-[#111827] rounded-2xl p-7 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-all">
           <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2.5">
-            <span class="w-2.5 h-2.5 rounded-full bg-indigo-600"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-indigo-600 to-cyan-500"></span>
             <span>Tools & Platforms</span>
           </h3>
           <div class="space-y-5">
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Git & GitHub</span><span>88%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="88%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Git & GitHub</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">88%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="88%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>VS Code & DevTools</span><span>95%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="95%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>VS Code & DevTools</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">95%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="95%"></div>
+              </div>
             </div>
             <div>
-              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Postman REST Client</span><span>82%</span></div>
-              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800"><div class="h-full bg-indigo-600 rounded-full skill-bar-fill progress-bar-fill w-0" data-width="82%"></div></div>
+              <div class="flex justify-between text-sm mb-1.5 font-medium"><span>Postman REST Client</span><span
+                  class="text-indigo-600 dark:text-indigo-400 font-semibold">82%</span></div>
+              <div class="w-full h-2 rounded-full bg-slate-100 dark:bg-slate-800">
+                <div
+                  class="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full skill-bar-fill progress-bar-fill w-0"
+                  data-width="82%"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -423,26 +637,33 @@
   </section>
 
   <!-- 7. WORK EXPERIENCE WITH INTERACTIVE SCROLL TRACKING -->
-  <section id="experience" class="py-28 md:py-36 bg-[#F8FAFC] dark:bg-[#0E1320] border-y border-slate-200/80 dark:border-slate-800 transition-colors">
+  <section id="experience"
+    class="py-28 md:py-36 bg-[#F8FAFC] dark:bg-[#0E1320] border-y border-slate-200/80 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
           <span>Work Experience</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
           Professional Experience & Training
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-indigo-500 mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-cyan-500 mx-auto rounded-full"></div>
       </div>
 
       <div id="experience-timeline" class="relative max-w-4xl mx-auto py-6">
         <!-- Static Track Line -->
-        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 -translate-x-1/2 w-1 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+        <div
+          class="absolute left-4 md:left-1/2 top-0 bottom-0 -translate-x-1/2 w-1 bg-slate-200 dark:bg-slate-800 rounded-full">
+        </div>
         <!-- Animated Fill Line -->
-        <div id="exp-fill-line" class="absolute left-4 md:left-1/2 top-0 -translate-x-1/2 w-1 bg-indigo-600 rounded-full h-0 transition-all"></div>
+        <div id="exp-fill-line"
+          class="absolute left-4 md:left-1/2 top-0 -translate-x-1/2 w-1 bg-indigo-600 rounded-full h-0 transition-[height] duration-75">
+        </div>
         <!-- Moving Circle Indicator -->
-        <div id="exp-scroll-circle" class="absolute left-4 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white dark:bg-slate-900 border-4 border-indigo-600 shadow-glow flex items-center justify-center z-20 pointer-events-none transition-all">
+        <div id="exp-scroll-circle"
+          class="absolute left-4 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white dark:bg-slate-900 border-4 border-indigo-600 shadow-glow flex items-center justify-center z-20 pointer-events-none transition-[top] duration-75">
           <div class="w-2 h-2 rounded-full bg-indigo-600 animate-ping"></div>
         </div>
 
@@ -451,19 +672,27 @@
           <div class="relative flex flex-col md:flex-row items-start">
             <div class="hidden md:block md:w-1/2"></div>
             <div class="w-full pl-10 md:pl-10 md:w-1/2">
-              <div class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft">
+              <div
+                class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
                 <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Internship</span>
-                  <span class="text-xs text-slate-500">Present</span>
+                  <span
+                    class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Internship</span>
+                  <span class="text-xs text-slate-500 dark:text-slate-400">Present</span>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-white">MERN Stack Intern</h3>
-                <p class="text-sm font-semibold text-indigo-600 mb-2">DigiCoders Technologies Pvt. Ltd., Lucknow</p>
-                <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Developing responsive user interfaces using React.js, modern JavaScript (ES6+), HTML5, and CSS3.</p>
+                <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-2">DigiCoders Technologies Pvt.
+                  Ltd., Lucknow</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Developing responsive user
+                  interfaces using React.js, modern JavaScript (ES6+), HTML5, and CSS3.</p>
                 <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600">React.js</span>
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600">JavaScript</span>
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600">Node.js</span>
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600">MongoDB</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">React.js</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">JavaScript</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Node.js</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">MongoDB</span>
                 </div>
               </div>
             </div>
@@ -473,18 +702,28 @@
           <div class="relative flex flex-col md:flex-row-reverse items-start">
             <div class="hidden md:block md:w-1/2"></div>
             <div class="w-full pl-10 md:pl-0 md:pr-10 md:w-1/2">
-              <div class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft">
+              <div
+                class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
                 <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Industry Training (45 Days)</span>
-                  <span class="text-xs text-slate-500">May 2025</span>
+                  <span
+                    class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Industry
+                    Training (45 Days)</span>
+                  <span class="text-xs text-slate-500 dark:text-slate-400">May 2025</span>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-white">Trainee</h3>
-                <p class="text-sm font-semibold text-indigo-600 mb-2">Hindustan Aeronautics Limited (HAL)</p>
-                <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Trained in web technologies and engineered responsive pages with REST API integration for the AMC Complaint Management System.</p>
+                <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Hindustan Aeronautics Limited
+                  (HAL)</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">Trained in web technologies
+                  and engineered responsive pages with REST API integration for the AMC Complaint Management System.</p>
                 <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-100 dark:border-slate-800">
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600">REST APIs</span>
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600">JavaScript</span>
-                  <span class="text-[11px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600">AMC System</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">REST
+                    APIs</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">JavaScript</span>
+                  <span
+                    class="text-[11px] px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">AMC
+                    System</span>
                 </div>
               </div>
             </div>
@@ -498,99 +737,170 @@
   <!-- 8. PROJECTS SECTION -->
   <section id="projects" class="py-28 md:py-36 bg-white dark:bg-[#0B0F19] transition-colors">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
           <span>Featured Work</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
           Recent Projects & Portals
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-indigo-500 mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-cyan-500 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         <!-- Project 1: School ERP -->
-        <div class="group bg-white dark:bg-[#111827] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft hover:-translate-y-2 transition-all flex flex-col justify-between">
+        <div
+          class="group bg-white dark:bg-[#111827] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft hover:-translate-y-2 hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-all flex flex-col justify-between">
           <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
-              <img src="assets/project-school-erp.jpg" alt="School ERP Management System" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
+              <img src="assets/project-school-erp.jpg" alt="School ERP Management System"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
-              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">Web App</span>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2 mb-2">School ERP Management System</h3>
-              <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">Frontend architecture for school management with Admin and User dashboards and structured record viewing.</p>
+              <span
+                class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">Web
+                App</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2.5 mb-2">School ERP Management System</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">Frontend architecture for school
+                management with Admin and User dashboards and structured record viewing.</p>
               <div class="space-y-1.5 text-xs text-slate-600 dark:text-slate-400">
-                <div class="flex items-center gap-2"><span>✔</span><span>Role-based Admin and Student dashboards</span></div>
-                <div class="flex items-center gap-2"><span>✔</span><span>Instant multi-device responsiveness</span></div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 shrink-0 text-emerald-500" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Role-based Admin and Student dashboards</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 shrink-0 text-emerald-500" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Instant multi-device responsiveness</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800">
+          <div class="px-6 pb-6 pt-3 border-t border-slate-100 dark:border-slate-800">
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 border border-slate-200 dark:border-slate-700">React.js</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 border border-slate-200 dark:border-slate-700">Tailwind</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 border border-slate-200 dark:border-slate-700">REST API</span>
+              <span
+                class="text-[11px] px-2.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React.js</span>
+              <span
+                class="text-[11px] px-2.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Tailwind</span>
+              <span
+                class="text-[11px] px-2.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">REST
+                API</span>
             </div>
             <div class="flex gap-2">
-              <a href="https://schoolerpmanagement.vercel.app/" target="_blank" rel="noreferrer" class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors">Live Demo ↗</a>
-              <a href="https://github.com/shriya-mishra-placeholder/school-erp-system" target="_blank" rel="noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-200 transition-colors">Code</a>
+              <a href="https://schoolerpmanagement.vercel.app/" target="_blank" rel="noreferrer"
+                class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors">Live
+                Demo ↗</a>
+              <a href="https://github.com/Shriyamishra22" target="_blank" rel="noreferrer"
+                class="px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">GitHub</a>
             </div>
           </div>
         </div>
 
         <!-- Project 2: JE Classes Meerut -->
-        <div class="group bg-white dark:bg-[#111827] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft hover:-translate-y-2 transition-all flex flex-col justify-between">
+        <div
+          class="group bg-white dark:bg-[#111827] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft hover:-translate-y-2 hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-all flex flex-col justify-between">
           <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
-              <img src="assets/project-je-classes.jpg" alt="JE Classes Meerut" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
+              <img src="assets/project-je-classes.jpg" alt="JE Classes Meerut"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
-              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">Educational Portal</span>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2 mb-2">JE Classes Meerut</h3>
-              <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">Educational website presenting courses, faculty profiles, and student inquiry flows with clean navigation.</p>
+              <span
+                class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">Educational
+                Portal</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2.5 mb-2">JE Classes Meerut</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">Educational website presenting
+                courses, faculty profiles, and student inquiry flows with clean navigation.</p>
               <div class="space-y-1.5 text-xs text-slate-600 dark:text-slate-400">
-                <div class="flex items-center gap-2"><span>✔</span><span>Structured course catalogues & institute info</span></div>
-                <div class="flex items-center gap-2"><span>✔</span><span>Clean UI with quick mobile navigation</span></div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 shrink-0 text-emerald-500" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Structured course catalogues & institute info</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 shrink-0 text-emerald-500" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Clean UI with quick mobile navigation</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800">
+          <div class="px-6 pb-6 pt-3 border-t border-slate-100 dark:border-slate-800">
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 border border-slate-200 dark:border-slate-700">React.js</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 border border-slate-200 dark:border-slate-700">HTML5/CSS3</span>
+              <span
+                class="text-[11px] px-2.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React.js</span>
+              <span
+                class="text-[11px] px-2.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">HTML5/CSS3</span>
             </div>
             <div class="flex gap-2">
-              <a href="https://github.com/shriya-mishra-placeholder/je-classes-meerut" target="_blank" rel="noreferrer" class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors">Details ↗</a>
-              <a href="https://github.com/shriya-mishra-placeholder/je-classes-meerut" target="_blank" rel="noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-200 transition-colors">Code</a>
+              <a href="https://jee-merrut.vercel.app/" target="_blank" rel="noreferrer"
+                class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors">Live
+                Demo ↗</a>
+              <a href="https://github.com/Shriyamishra22" target="_blank" rel="noreferrer"
+                class="px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">GitHub</a>
             </div>
           </div>
         </div>
 
         <!-- Project 3: JalMitra -->
-        <div class="group bg-white dark:bg-[#111827] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft hover:-translate-y-2 transition-all flex flex-col justify-between">
+        <div
+          class="group bg-white dark:bg-[#111827] rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-soft hover:-translate-y-2 hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-all flex flex-col justify-between">
           <div>
-            <div class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
-              <img src="assets/project-jalmitra.jpg" alt="JalMitra Water Supply" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+            <div
+              class="aspect-[16/10] overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-800">
+              <img src="assets/project-jalmitra.jpg" alt="JalMitra Water Supply"
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div class="p-6">
-              <span class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">Utility & Service</span>
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2 mb-2">JalMitra Water App</h3>
-              <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">Water supply service interface for supplier selection, instant ordering, payment, and order tracking.</p>
+              <span
+                class="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400">Utility
+                & Service</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mt-2.5 mb-2">JalMitra Water App</h3>
+              <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-2">Water supply service interface for
+                supplier selection, instant ordering, payment, and order tracking.</p>
               <div class="space-y-1.5 text-xs text-slate-600 dark:text-slate-400">
-                <div class="flex items-center gap-2"><span>✔</span><span>Supplier selection and live tracking UI</span></div>
-                <div class="flex items-center gap-2"><span>✔</span><span>Modular reusable component architecture</span></div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 shrink-0 text-emerald-500" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Supplier selection and live tracking UI</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-3.5 h-3.5 shrink-0 text-emerald-500" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Modular reusable component architecture</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="px-6 pb-6 pt-2 border-t border-slate-100 dark:border-slate-800">
+          <div class="px-6 pb-6 pt-3 border-t border-slate-100 dark:border-slate-800">
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 border border-slate-200 dark:border-slate-700">React.js</span>
-              <span class="text-[11px] px-2 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 border border-slate-200 dark:border-slate-700">Component State</span>
+              <span
+                class="text-[11px] px-2.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React.js</span>
+              <span
+                class="text-[11px] px-2.5 py-0.5 rounded bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Component
+                State</span>
             </div>
             <div class="flex gap-2">
-              <a href="https://github.com/shriya-mishra-placeholder/jalmitra-water-app" target="_blank" rel="noreferrer" class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors">Details ↗</a>
-              <a href="https://github.com/shriya-mishra-placeholder/jalmitra-water-app" target="_blank" rel="noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-200 transition-colors">Code</a>
+              <a href="https://github.com/Shriyamishra22" target="_blank" rel="noreferrer"
+                class="flex-1 text-center py-2.5 rounded-xl bg-indigo-600 text-white text-xs font-semibold hover:bg-indigo-700 transition-colors">View
+                on GitHub ↗</a>
             </div>
           </div>
         </div>
@@ -600,26 +910,33 @@
   </section>
 
   <!-- 9. EDUCATION SECTION (TIMELINE STYLED MATCHING WORK EXPERIENCE) -->
-  <section id="education" class="py-28 md:py-36 bg-[#F8FAFC] dark:bg-[#0E1320] border-y border-slate-200/80 dark:border-slate-800 transition-colors">
+  <section id="education"
+    class="py-28 md:py-36 bg-[#F8FAFC] dark:bg-[#0E1320] border-y border-slate-200/80 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
           <span>Academic Background</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
           Education & Qualifications
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-indigo-500 mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-cyan-500 mx-auto rounded-full"></div>
       </div>
 
       <div id="education-timeline" class="relative max-w-4xl mx-auto py-6">
         <!-- Static Track Line -->
-        <div class="absolute left-4 md:left-1/2 top-0 bottom-0 -translate-x-1/2 w-1 bg-slate-200 dark:bg-slate-800 rounded-full"></div>
+        <div
+          class="absolute left-4 md:left-1/2 top-0 bottom-0 -translate-x-1/2 w-1 bg-slate-200 dark:bg-slate-800 rounded-full">
+        </div>
         <!-- Animated Fill Line -->
-        <div id="edu-fill-line" class="absolute left-4 md:left-1/2 top-0 -translate-x-1/2 w-1 bg-indigo-600 rounded-full h-0 transition-all"></div>
+        <div id="edu-fill-line"
+          class="absolute left-4 md:left-1/2 top-0 -translate-x-1/2 w-1 bg-indigo-600 rounded-full h-0 transition-[height] duration-75">
+        </div>
         <!-- Moving Circle Indicator -->
-        <div id="edu-scroll-circle" class="absolute left-4 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white dark:bg-slate-900 border-4 border-indigo-600 shadow-glow flex items-center justify-center z-20 pointer-events-none transition-all">
+        <div id="edu-scroll-circle"
+          class="absolute left-4 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white dark:bg-slate-900 border-4 border-indigo-600 shadow-glow flex items-center justify-center z-20 pointer-events-none transition-[top] duration-75">
           <div class="w-2 h-2 rounded-full bg-indigo-600 animate-ping"></div>
         </div>
 
@@ -628,14 +945,19 @@
           <div class="relative flex flex-col md:flex-row items-start">
             <div class="hidden md:block md:w-1/2"></div>
             <div class="w-full pl-10 md:pl-10 md:w-1/2">
-              <div class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft">
+              <div
+                class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
                 <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Currently Pursuing</span>
-                  <span class="text-xs text-slate-500">2023 – 2026</span>
+                  <span
+                    class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Currently
+                    Pursuing</span>
+                  <span class="text-xs text-slate-500 dark:text-slate-400">2023 – 2026</span>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-white">Bachelor of Computer Application (BCA)</h3>
-                <p class="text-sm font-semibold text-indigo-600 mb-2">Ranveer Rananjay Post Graduate College, Amethi</p>
-                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Specialization in modern web technologies, Data Structures & Algorithms, DBMS, and Software Engineering paradigms.</p>
+                <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Ranveer Rananjay Post
+                  Graduate College, Amethi</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Specialization in modern web
+                  technologies, Data Structures & Algorithms, DBMS, and Software Engineering paradigms.</p>
               </div>
             </div>
           </div>
@@ -644,14 +966,18 @@
           <div class="relative flex flex-col md:flex-row-reverse items-start">
             <div class="hidden md:block md:w-1/2"></div>
             <div class="w-full pl-10 md:pl-0 md:pr-10 md:w-1/2">
-              <div class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft">
+              <div
+                class="bg-white dark:bg-[#111827] p-8 sm:p-9 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-soft hover:border-indigo-200 dark:hover:border-indigo-800/70 transition-colors">
                 <div class="flex items-center justify-between mb-3">
-                  <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Completed</span>
-                  <span class="text-xs text-slate-500">U.P. Board</span>
+                  <span
+                    class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300">Completed</span>
+                  <span class="text-xs text-slate-500 dark:text-slate-400">U.P. Board</span>
                 </div>
                 <h3 class="text-xl font-bold text-slate-900 dark:text-white">Senior Secondary (Class XII)</h3>
-                <p class="text-sm font-semibold text-indigo-600 mb-2">Shri Hanuman Inter College, Amethi, U.P.</p>
-                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Completed secondary education with solid academic foundations in analytical sciences, mathematics, and computer fundamentals.</p>
+                <p class="text-sm font-semibold text-indigo-600 dark:text-indigo-400 mb-2">Shri Hanuman Inter College,
+                  Amethi, U.P.</p>
+                <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Completed secondary education with
+                  solid academic foundations in analytical sciences, mathematics, and computer fundamentals.</p>
               </div>
             </div>
           </div>
@@ -664,134 +990,210 @@
   <!-- 10. CONTACT SECTION WITH DIRECT WORKING EMAIL FORM -->
   <section id="contact" class="py-28 md:py-36 bg-white dark:bg-[#0B0F19] transition-colors">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16">
-      
+
       <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/60 mb-3 shadow-sm">
           <span>Get in Touch</span>
         </div>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
           Let's Connect & Build Together
         </h2>
-        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-indigo-500 mx-auto rounded-full"></div>
+        <div class="w-16 h-1 bg-gradient-to-r from-indigo-600 to-cyan-500 mx-auto rounded-full"></div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 max-w-6xl mx-auto items-start">
-        
+
         <!-- Left: Clean Contact Details -->
         <div class="lg:col-span-5 space-y-6">
-          <div class="bg-slate-50 dark:bg-[#111827] rounded-2xl p-7 sm:p-9 border border-slate-200 dark:border-slate-800 shadow-soft">
+          <div
+            class="bg-slate-50 dark:bg-[#111827] rounded-2xl p-7 sm:p-9 border border-slate-200 dark:border-slate-800 shadow-soft">
             <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Direct Contact</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">
               Reach out for full-time roles, internships, freelance projects, or tech collaborations.
             </p>
-            
+
             <div class="space-y-4">
               <!-- Email -->
-              <div class="flex items-start justify-between p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+              <div
+                class="flex items-start justify-between p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
                 <div>
                   <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Email Address</p>
-                  <a href="mailto:panditsimmi0@gmail.com" class="text-sm font-semibold text-slate-900 dark:text-white hover:text-indigo-600 break-all">panditsimmi0@gmail.com</a>
+                  <a href="mailto:panditsimmi0@gmail.com"
+                    class="text-sm font-semibold text-slate-900 dark:text-white hover:text-indigo-600 break-all">panditsimmi0@gmail.com</a>
                 </div>
-                <button type="button" onclick="copyText('panditsimmi0@gmail.com', this)" class="p-2 text-slate-500 hover:text-indigo-600" title="Copy Email">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button type="button" onclick="copyText('panditsimmi0@gmail.com', this)"
+                  class="p-2 text-slate-500 hover:text-indigo-600" title="Copy Email">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                 </button>
               </div>
 
               <!-- Phone -->
-              <div class="flex items-start justify-between p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+              <div
+                class="flex items-start justify-between p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
                 <div>
                   <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Phone & WhatsApp</p>
-                  <a href="tel:8052625007" class="text-sm font-semibold text-slate-900 dark:text-white hover:text-indigo-600">+91 8052625007</a>
+                  <a href="tel:8052625007"
+                    class="text-sm font-semibold text-slate-900 dark:text-white hover:text-indigo-600">+91
+                    8052625007</a>
                 </div>
-                <button type="button" onclick="copyText('8052625007', this)" class="p-2 text-slate-500 hover:text-indigo-600" title="Copy Phone">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <button type="button" onclick="copyText('8052625007', this)"
+                  class="p-2 text-slate-500 hover:text-indigo-600" title="Copy Phone">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
                 </button>
               </div>
 
               <!-- Location -->
               <div class="p-4 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
                 <p class="text-[11px] font-medium text-slate-500 dark:text-slate-400">Location</p>
-                <p class="text-sm font-semibold text-slate-900 dark:text-white">Amethi & Lucknow, Uttar Pradesh, India</p>
+                <p class="text-sm font-semibold text-slate-900 dark:text-white">Amethi & Lucknow, Uttar Pradesh, India
+                </p>
+              </div>
+
+              <!-- Social Profiles -->
+              <div class="grid grid-cols-2 gap-3 pt-1">
+                <a href="https://github.com/Shriyamishra22" target="_blank" rel="noreferrer"
+                  class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/shriyamishra88" target="_blank" rel="noreferrer"
+                  class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-700 dark:text-slate-200 hover:border-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
               </div>
             </div>
 
             <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center gap-3">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-              <p class="text-xs font-medium text-slate-600 dark:text-slate-300">Available for MERN Stack / React Developer Roles</p>
+              <p class="text-xs font-medium text-slate-600 dark:text-slate-300">Available for MERN Stack / React
+                Developer Roles</p>
             </div>
           </div>
         </div>
 
         <!-- Right: Contact Form -->
         <div class="lg:col-span-7">
-          <div class="bg-slate-50 dark:bg-[#111827] rounded-2xl p-7 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-soft">
+          <div
+            class="bg-slate-50 dark:bg-[#111827] rounded-2xl p-7 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-soft">
             <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Send a Message</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-6">Fill in the form to deliver your message straight to Shriya Mishra's inbox.</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-6">Fill in the form to deliver your message straight
+              to Shriya Mishra's inbox.</p>
 
             <!-- Success State -->
-            <div id="form-success-state" class="hidden py-8 text-center flex flex-col items-center">
-              <div class="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 border border-emerald-200 mx-auto">
-                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </div>
-              <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Message Prepared & Ready!</h4>
-              <p class="text-sm text-slate-600 dark:text-slate-300 max-w-lg mb-6 leading-relaxed mx-auto">
-                Thank you, <strong id="success-user-name" class="text-slate-900 dark:text-white"></strong>! Your message addressed to Shriya Mishra (<span class="text-indigo-600 font-semibold">panditsimmi0@gmail.com</span>) is prepared. Click below to deliver it via Gmail, your email app, or WhatsApp:
-              </p>
-              
-              <div class="flex flex-wrap items-center justify-center gap-3 mb-6 w-full max-w-md">
-                <!-- 1-Click Gmail Web Compose -->
-                <a id="email-gmail-link" href="#" target="_blank" rel="noreferrer" class="flex-1 min-w-[140px] px-4 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm">
-                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-                  <span>Open Gmail Web</span>
-                </a>
+            <div id="form-success-state" class="hidden py-8 text-center">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4 border border-emerald-200 mx-auto">
+                  <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Message Prepared & Ready!</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-300 max-w-lg mb-6 leading-relaxed mx-auto">
+                  Thank you, <strong id="success-user-name" class="text-slate-900 dark:text-white"></strong>! Your
+                  message addressed to Shriya Mishra (<span
+                    class="text-indigo-600 font-semibold">panditsimmi0@gmail.com</span>) is prepared. Click below to
+                  deliver it via Gmail, your email app, or WhatsApp:
+                </p>
 
-                <!-- 1-Click Default Mail Client -->
-                <a id="email-app-link" href="#" class="flex-1 min-w-[140px] px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                  <span>Default Mail App</span>
-                </a>
+                <div class="flex flex-wrap items-center justify-center gap-3 mb-6 w-full max-w-md">
+                  <!-- 1-Click Gmail Web Compose -->
+                  <a id="email-gmail-link" href="#" target="_blank" rel="noreferrer"
+                    class="flex-1 min-w-[140px] px-4 py-3 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.272H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+                    </svg>
+                    <span>Open Gmail Web</span>
+                  </a>
 
-                <!-- WhatsApp Direct Chat -->
-                <a id="email-whatsapp-link" href="#" target="_blank" rel="noreferrer" class="flex-1 min-w-[140px] px-4 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm">
-                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z"/></svg>
-                  <span>WhatsApp Shriya</span>
-                </a>
-              </div>
+                  <!-- 1-Click Default Mail Client -->
+                  <a id="email-app-link" href="#"
+                    class="flex-1 min-w-[140px] px-4 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Default Mail App</span>
+                  </a>
 
-              <div>
-                <button id="send-another-btn" type="button" class="px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
-                  ← Send Another Message
-                </button>
+                  <!-- WhatsApp Direct Chat -->
+                  <a id="email-whatsapp-link" href="#" target="_blank" rel="noreferrer"
+                    class="flex-1 min-w-[140px] px-4 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold transition-all flex items-center justify-center gap-2 shadow-sm">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z" />
+                    </svg>
+                    <span>WhatsApp Shriya</span>
+                  </a>
+                </div>
+
+                <div>
+                  <button id="send-another-btn" type="button"
+                    class="px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-semibold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">
+                    ← Send Another Message
+                  </button>
+                </div>
               </div>
             </div>
 
             <!-- Form -->
-            <form id="contact-form" action="https://formsubmit.co/panditsimmi0@gmail.com" method="POST" class="space-y-4">
+            <form id="contact-form" action="https://formsubmit.co/panditsimmi0@gmail.com" method="POST"
+              class="space-y-4">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_subject" value="New Portfolio Message for Shriya Mishra">
 
               <div>
-                <label for="form-name" class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Your Full Name <span class="text-rose-500">*</span></label>
-                <input type="text" id="form-name" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none focus:border-indigo-600 dark:focus:border-indigo-400" />
+                <label for="form-name"
+                  class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Your
+                  Full Name <span class="text-rose-500">*</span></label>
+                <input type="text" id="form-name" name="name" placeholder="Your Name" required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 transition-all" />
               </div>
 
               <div>
-                <label for="form-email" class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Email Address <span class="text-rose-500">*</span></label>
-                <input type="email" id="form-email" name="email" placeholder="Your Email Address" required class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none focus:border-indigo-600 dark:focus:border-indigo-400" />
+                <label for="form-email"
+                  class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Email
+                  Address <span class="text-rose-500">*</span></label>
+                <input type="email" id="form-email" name="email" placeholder="Your Email Address" required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 transition-all" />
               </div>
 
               <div>
-                <label for="form-subject" class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Subject</label>
-                <input type="text" id="form-subject" name="subject" placeholder="Subject of your message" class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none focus:border-indigo-600 dark:focus:border-indigo-400" />
+                <label for="form-subject"
+                  class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Subject</label>
+                <input type="text" id="form-subject" name="subject" placeholder="Subject of your message"
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 transition-all" />
               </div>
 
               <div>
-                <label for="form-message" class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Your Message <span class="text-rose-500">*</span></label>
-                <textarea id="form-message" name="message" rows="4" placeholder="Your message or project requirements..." required class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none resize-none focus:border-indigo-600 dark:focus:border-indigo-400"></textarea>
+                <label for="form-message"
+                  class="block text-xs font-semibold text-slate-800 dark:text-slate-200 uppercase tracking-wider mb-1.5">Your
+                  Message <span class="text-rose-500">*</span></label>
+                <textarea id="form-message" name="message" rows="4"
+                  placeholder="Your message or project requirements..." required
+                  class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm outline-none resize-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500/20 dark:focus:border-indigo-400 transition-all"></textarea>
               </div>
 
-              <button id="submit-btn" type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 text-white font-semibold text-sm hover:bg-indigo-700 transition-all shadow-soft flex items-center justify-center">
+              <button id="submit-btn" type="submit"
+                class="w-full py-3.5 rounded-xl bg-indigo-600 text-white font-semibold text-sm hover:bg-indigo-700 transition-all shadow-soft flex items-center justify-center">
                 <span>Send Message</span>
               </button>
             </form>
@@ -804,11 +1206,13 @@
   </section>
 
   <!-- 11. CLEAN SPACIOUS FOOTER (NO DOT AFTER MISHRA) -->
-  <footer class="bg-slate-50 dark:bg-[#080C14] text-slate-800 dark:text-slate-200 pt-20 pb-14 border-t border-slate-200 dark:border-slate-800 transition-colors">
+  <footer
+    class="bg-slate-50 dark:bg-[#080C14] text-slate-800 dark:text-slate-200 pt-20 pb-14 border-t border-slate-200 dark:border-slate-800 transition-colors">
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 xl:px-16">
-      
-      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-slate-200 dark:border-slate-800">
-        
+
+      <div
+        class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-slate-200 dark:border-slate-800">
+
         <!-- Brand (No dot after Mishra) -->
         <div class="flex flex-col items-center md:items-start text-center md:text-left">
           <div class="flex items-center gap-2 mb-2">
@@ -834,24 +1238,46 @@
 
         <!-- Social Icons -->
         <div class="flex items-center gap-3">
-          <a href="https://github.com/shriya-mishra-placeholder" target="_blank" rel="noreferrer" class="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 border border-slate-200 dark:border-slate-700 shadow-sm" aria-label="GitHub">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <a href="https://github.com/Shriyamishra22" target="_blank" rel="noreferrer"
+            class="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 transition-all border border-slate-200 dark:border-slate-700 shadow-sm"
+            aria-label="GitHub">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
           </a>
-          <a href="https://linkedin.com/in/shriya-mishra-placeholder" target="_blank" rel="noreferrer" class="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 border border-slate-200 dark:border-slate-700 shadow-sm" aria-label="LinkedIn">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a href="https://linkedin.com/in/shriyamishra88" target="_blank" rel="noreferrer"
+            class="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:-translate-y-0.5 transition-all border border-slate-200 dark:border-slate-700 shadow-sm"
+            aria-label="LinkedIn">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
           </a>
-          <a href="https://wa.me/918052625007" target="_blank" rel="noreferrer" class="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-[#25D366] border border-slate-200 dark:border-slate-700 shadow-sm" aria-label="WhatsApp">
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z"/></svg>
+          <a href="https://wa.me/918052625007" target="_blank" rel="noreferrer"
+            class="p-2.5 rounded-xl bg-white dark:bg-slate-800 text-[#25D366] hover:-translate-y-0.5 transition-all border border-slate-200 dark:border-slate-700 shadow-sm"
+            aria-label="WhatsApp">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z" />
+            </svg>
           </a>
         </div>
       </div>
 
       <!-- Bottom Copyright & Back to Top -->
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
+      <div
+        class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 dark:text-slate-400 gap-4">
         <p>© 2026 Shriya Mishra. All rights reserved.</p>
-        <button id="back-to-top" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 hover:bg-indigo-600 hover:text-white text-slate-700 dark:text-slate-200 transition-all border border-slate-200 dark:border-slate-700 shadow-sm" aria-label="Back to Top">
+        <button id="back-to-top"
+          class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 hover:bg-indigo-600 hover:text-white text-slate-700 dark:text-slate-200 transition-all border border-slate-200 dark:border-slate-700 shadow-sm"
+          aria-label="Back to Top">
           <span>Back to Top</span>
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"></path></svg>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"></path>
+          </svg>
         </button>
       </div>
 
@@ -861,17 +1287,29 @@
   <!-- 12. FLOATING ACTION BUTTONS (OFFICIAL WHATSAPP & PHONE CALL) -->
   <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
     <!-- Official WhatsApp -->
-    <a href="https://wa.me/918052625007?text=Hi%20Shriya,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noreferrer" class="w-13 h-13 p-3.5 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-soft-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative shadow-md" aria-label="Chat on WhatsApp">
-      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z"/></svg>
+    <a href="https://wa.me/918052625007?text=Hi%20Shriya,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect!"
+      target="_blank" rel="noreferrer"
+      class="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-soft-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative"
+      aria-label="Chat on WhatsApp">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.15C10.57 20.15 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.05 20.15ZM16.57 14.33C16.32 14.2 15.11 13.61 14.88 13.52C14.66 13.44 14.5 13.4 14.34 13.64C14.18 13.89 13.71 14.44 13.57 14.6C13.43 14.77 13.28 14.79 13.03 14.66C12.79 14.54 11.99 14.27 11.05 13.43C10.31 12.77 9.81 11.96 9.67 11.71C9.52 11.47 9.65 11.33 9.78 11.21C9.89 11.1 10.03 10.92 10.15 10.77C10.28 10.63 10.32 10.53 10.4 10.36C10.48 10.2 10.44 10.05 10.38 9.93C10.32 9.81 9.83 8.6 9.63 8.1C9.43 7.62 9.23 7.68 9.08 7.67C8.93 7.67 8.77 7.66 8.61 7.66C8.44 7.66 8.18 7.72 7.95 7.97C7.72 8.22 7.09 8.81 7.09 10.01C7.09 11.22 7.97 12.38 8.09 12.54C8.21 12.71 9.83 15.2 12.3 16.27C12.89 16.52 13.35 16.67 13.7 16.79C14.3 16.98 14.84 16.95 15.27 16.89C15.75 16.82 16.75 16.28 16.96 15.71C17.16 15.13 17.16 14.64 17.1 14.54C17.04 14.43 16.82 14.45 16.57 14.33Z" />
+      </svg>
     </a>
 
     <!-- Official Phone Call -->
-    <a href="tel:8052625007" class="w-13 h-13 p-3.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-soft-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative shadow-md" aria-label="Direct Call">
-      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/></svg>
+    <a href="tel:8052625007"
+      class="w-12 h-12 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white shadow-soft-lg flex items-center justify-center hover:scale-110 active:scale-95 transition-all group relative"
+      aria-label="Direct Call">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M6.62 10.79C8.06 13.62 10.38 15.94 13.21 17.38L15.41 15.18C15.69 14.9 16.08 14.82 16.43 14.93C17.55 15.3 18.75 15.5 20 15.5C20.55 15.5 21 15.95 21 16.5V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z" />
+      </svg>
     </a>
   </div>
 
   <!-- Main JavaScript File -->
   <script src="js/main.js"></script>
 </body>
+
 </html>
