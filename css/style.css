@@ -101,6 +101,14 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
+.animate-float-delayed {
+  animation: float 5.5s ease-in-out 1.2s infinite;
+}
+
+.animate-float-slow {
+  animation: float 7s ease-in-out 0.6s infinite;
+}
+
 /* Progress bar filling */
 .progress-bar-fill {
   transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
