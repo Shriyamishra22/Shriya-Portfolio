@@ -210,11 +210,11 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(statsSection);
   }
 
-  // 8. Skill Progress Bars Animation
+  // 8. Skill Progress Bars & Interactive 3D Tilt Skill Cards
   const skillBars = document.querySelectorAll('.skill-bar-fill');
   const skillsSection = document.getElementById('skills');
 
-  if (skillsSection) {
+  if (skillsSection && skillBars.length > 0) {
     const skillObserver = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         skillBars.forEach(bar => {
@@ -225,6 +225,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     skillObserver.observe(skillsSection);
   }
+
+  const skillCards = document.querySelectorAll('.skill-card');
+  skillCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const relX = e.clientX - rect.left;
+      const relY = e.clientY - rect.top;
+      const x = (relX / rect.width) - 0.5;
+      const y = (relY / rect.height) - 0.5;
+
+      card.style.setProperty('--mouse-x', `${relX}px`);
+      card.style.setProperty('--mouse-y', `${relY}px`);
+      card.style.transition = 'transform 0.08s ease-out, border-color 0.25s ease, box-shadow 0.25s ease';
+      card.style.transform = `perspective(800px) translateY(-8px) rotateX(${(-y * 16).toFixed(2)}deg) rotateY(${(x * 16).toFixed(2)}deg) rotateZ(${(x * 5).toFixed(2)}deg) scale(1.04)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transition = 'transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, box-shadow 0.25s ease';
+      card.style.transform = '';
+    });
+  });
 
   // 9. Timeline Scroll-Tracking Moving Circle
   const setupTimelineTracker = (containerId, circleId, fillLineId) => {
